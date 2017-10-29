@@ -1,0 +1,19 @@
+@import '../../../sass/_variables';
+
+.need-help {
+  min-height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .send-msg {
+    padding: 10px;
+    position: relative;
+    left: 15px;
+    background: $darkGray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+  }
+}

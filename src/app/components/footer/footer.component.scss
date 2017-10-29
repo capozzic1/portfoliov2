@@ -1,0 +1,16 @@
+@import '../../../sass/_variables';
+
+.footer {
+  background: #0ED0FF;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 9em;
+
+  .fa {
+    color: $darkGray;
+    border: 1px solid black;
+    padding: 10px;
+  }
+}

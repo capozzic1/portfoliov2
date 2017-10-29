@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '../app/components/header/header.component';
+//@import '../app/components/portfolio-carousel/portfolio-carousel.component'; //@import '../app/AppComponent/app.component';
+@import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
+@import './_variables'; /*
+font-family: 'Audiowide', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Kalam', cursive;
+font-family: 'Tinos', serif;
+*/
+
+body {
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: 'Merriweather', serif;
+  }
+
+  .footer,
+  .need-help,
+  .skill-inner,
+  .what-i-do {
+    color: $darkGray;
+  }
+}

@@ -1,0 +1,43 @@
+//
+@import '../../../sass/variables';
+@import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
+
+.hello {
+  h3,
+  h4,
+  h5,
+  p {
+    font-family: 'Kalam', cursive;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  h5 {
+    font-size: 1.7em;
+  }
+}
+
+.header {
+  min-height: 770px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .hello {
+    top: 50%;
+    transform: translateY(80%);
+  }
+
+  ,
+  h3,
+  h5 {
+    color: $fontColor;
+  }
+}
+
+.home-bg {
+  background-image: url('../../../assets/images/glow.jpg');
+}

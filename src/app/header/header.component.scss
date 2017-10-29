@@ -1,0 +1,39 @@
+//
+@import '../../sass/variables';
+
+.header {
+  background-image: url('../assets/images/glow.jpg');
+  min-height: 770px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .title-nav-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 39px;
+  }
+
+  .hello {
+    top: 50%;
+    transform: translateY(80%);
+  }
+
+  a,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: $fontColor;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .nav a {
+    padding-left: 12px;
+  }
+}

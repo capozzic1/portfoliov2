@@ -1,0 +1,23 @@
+@import '../../../sass/_variables';
+
+.check-portfolio {
+  background: #0ED0FF;
+  color: $darkGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 14em;
+
+  h3 {
+    padding-right: 25px;
+  }
+
+  button {
+    background: #495057;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 20%;
+  }
+}
