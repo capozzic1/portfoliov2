@@ -10,8 +10,9 @@ import { OnInit } from '@angular/core';
 
 export class Header implements OnInit {
   //background-image: url('../../../assets/images/glow.jpg');
-  imgSrc: string[] = ['home-bg'];
 
+  aboutPage: boolean;
+  homePage: boolean;
   currBackground: string;
 
   constructor(private route: ActivatedRoute) { }
@@ -19,6 +20,11 @@ export class Header implements OnInit {
   ngOnInit(): void {
     this.currBackground = this.route.snapshot.url.join('');
 
+    if (this.currBackground == 'home') {
+      this.homePage = true;
+    } else if (this.currBackground == 'about') {
+      this.aboutPage = true;
+    }
 
 
   }

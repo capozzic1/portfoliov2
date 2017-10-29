@@ -2,7 +2,7 @@
 @import '../../../sass/variables';
 @import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
 
-.hello {
+.header-body {
   h3,
   h4,
   h5,
@@ -21,12 +21,8 @@
 
 .header {
   min-height: 770px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  .hello {
+  .header-body {
     top: 50%;
     transform: translateY(80%);
   }
@@ -38,6 +34,19 @@
   }
 }
 
+%background-shared {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .home-bg {
   background-image: url('../../../assets/images/glow.jpg');
+  @extend %background-shared;
+}
+
+.about-bg {
+  background-image: url('../../../assets/images/bulb.jpg');
+  @extend %background-shared;
 }
