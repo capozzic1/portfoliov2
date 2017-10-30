@@ -13,6 +13,7 @@ import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
 import { TitleNavComponent } from '../components/title-nav/title-nav.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     AboutComponent,
     HomeComponent,
     TitleNavComponent,
+    AboutSnippetComponent,
 
 
   ],

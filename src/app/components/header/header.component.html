@@ -1,6 +1,6 @@
 <div [ngClass]="{'home-bg row' : currBackground == 'home', 'about-bg row' : currBackground == 'about' }">
   <!-- class="row"-->
-  <section class="header col-md-12">
+  <section [ngClass]="{ 'home-height header col-md-12 col-lg-12' : homePage, 'about-height header col-md-12 col-lg-12' : aboutPage }">
 
     <div class="row">
       <title-nav class="col-md-12"></title-nav>
