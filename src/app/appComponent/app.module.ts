@@ -14,6 +14,7 @@ import { HomeComponent } from '../views/home/home.component';
 import { TitleNavComponent } from '../components/title-nav/title-nav.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
+import { ContactComponent } from '../views/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,11 +22,16 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+{
+  path:'contact',
+  component: ContactComponent
+},
   {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
+
 
 ]
 
@@ -42,6 +48,7 @@ const appRoutes: Routes = [
     HomeComponent,
     TitleNavComponent,
     AboutSnippetComponent,
+    ContactComponent
 
 
   ],

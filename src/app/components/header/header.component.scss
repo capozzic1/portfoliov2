@@ -42,6 +42,7 @@
   background-size: cover;
 }
 
+//backgrounds for each page
 .home-bg {
   background-image: url('../../../assets/images/glow.jpg');
   @extend %background-shared;
@@ -50,6 +51,11 @@
 .about-bg {
   background-image: url('../../../assets/images/bulb.jpg');
   @extend %background-shared;
+}
+
+.contact-bg {
+    background-image: url('../../../assets/images/email.png');
+    @extend %background-shared;
 }
 
 .my-story {
