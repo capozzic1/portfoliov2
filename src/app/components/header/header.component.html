@@ -1,23 +1,40 @@
 <div class="row">
   <div [ngClass]="{'home-bg' : currBackground == 'home', 'about-bg' : currBackground == 'about', 'contact-bg' : contactPage }" class="col-md-12">
     <!-- class="row"-->
-    <section [ngClass]="{ 'home-height header col-md-12 col-lg-12' : homePage, 'about-height header col-md-12 col-lg-12' : aboutPage,
-  'contact-height' : contactPage }">
+    <section [ngClass]="{ 'home-height' : homePage, 'about-height' : aboutPage,
+  'contact-height header-gray' : contactPage }" class="header">
 
-      <div class="row">
-        <title-nav class="col-md-12"></title-nav>
+      <div class=" row ">
+        <div class="title-nav-wrap col-md-12 ">
+          <div class="title ">
+            <h2 class="text-md-center ">Lucid Web Dream</h2>
+          </div>
+          <div class="nav ">
+            <nav>
+              <ul>
+                <li>
+                  <a href=" ">Home</a>
+                  <a href=" ">Portfolio</a>
+                  <a href=" ">About</a>
+                  <a href=" ">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
         <div class="header-body mx-auto ">
-          <div *ngIf="homePage" class="hello">
+          <div *ngIf="homePage " class="hello ">
             <h3>Hello, I'm Chris.</h3>
             <h5>Front end developer.</h5>
             <h5>Lover of writing JavaScript.</h5>
             <h5>Lover of coffee.</h5>
           </div>
-          <div *ngIf="aboutPage" class="my-story" #myStory>
+          <div *ngIf="aboutPage " class="my-story " #myStory>
             <h3>About me</h3>
           </div>
           <div>
-            <div *ngIf="contactPage" class="contact">
+            <div *ngIf="contactPage " class="contact ">
               <h3>Contact</h3>
             </div>
           </div>

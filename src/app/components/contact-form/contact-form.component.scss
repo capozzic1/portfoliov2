@@ -1,16 +1,29 @@
+@import '../../../sass/_variables';
+
 .contact-wrap {
-border: 1px solid black;
+  padding: 30px 0;
 
-form {
-  padding: 30px;
-  width: 40%;
-  border: 1px solid black;
-  margin: 0 auto;
+  form {
+    color: $darkGray;
+    width: 40%;
+    margin: 0 auto;
 
-  input, textarea {
-    display:block;
-    width:100%;
-    padding: 10px;
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+    }
+
+    label {
+      padding-top: 10px;
+    }
+
+    .contact-submit {
+      margin-top: 10px;
+      background: $darkGray;
+      border: none;
+      color: white;
     }
   }
 }

@@ -2,15 +2,16 @@
 //@import '../app/components/header/header.component';
 //@import '../app/components/portfolio-carousel/portfolio-carousel.component'; //@import '../app/AppComponent/app.component';
 @import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
-@import './_variables'; /*
+@import './_variables';
+/*
 font-family: 'Audiowide', cursive;
 font-family: 'Merriweather', serif;
 font-family: 'Kalam', cursive;
 font-family: 'Tinos', serif;
 */
-
 body {
   button,
+  form,
   h1,
   h2,
   h3,
@@ -19,6 +20,7 @@ body {
     font-family: 'Merriweather', serif;
   }
 
+  .contact-form,
   .footer,
   .need-help,
   .skill-inner,
@@ -26,7 +28,7 @@ body {
     color: $darkGray;
   }
 
- p {
-       font-size: 1.2em;
- }
+  p {
+    font-size: 1.2em;
+  }
 }
