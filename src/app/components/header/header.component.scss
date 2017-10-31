@@ -19,6 +19,7 @@
   }
 }
 
+.contact,
 .header-body,
 .my-story {
   position: relative;
@@ -35,14 +36,18 @@
   min-height: 600px;
 }
 
+.contact-height {
+  min-height: 400px;
+}
+
 %background-shared {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 //backgrounds for each page
+
 .home-bg {
   background-image: url('../../../assets/images/glow.jpg');
   @extend %background-shared;
@@ -54,8 +59,8 @@
 }
 
 .contact-bg {
-    background-image: url('../../../assets/images/email.png');
-    @extend %background-shared;
+  background-image: url('../../../assets/images/purple.jpg');
+  @extend %background-shared;
 }
 
 .my-story {
