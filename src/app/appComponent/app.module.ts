@@ -15,6 +15,7 @@ import { TitleNavComponent } from '../components/title-nav/title-nav.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
+import { ContactFormComponent } from '../components/contact-form/contact-form.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     HomeComponent,
     TitleNavComponent,
     AboutSnippetComponent,
-    ContactComponent
+    ContactComponent,
+    ContactFormComponent
 
 
   ],
