@@ -4,7 +4,7 @@ import { Project } from '../project';
 
 @Injectable()
 export class ProjectService {
-  getProjects(): Project[] {
-    return PROJECTS;
+  getProjects(): Promise<Project[]> {
+    return Promise.resolve(PROJECTS);
   }
 }

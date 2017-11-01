@@ -18,10 +18,18 @@
     font-size: 1.7em;
   }
 
-  .header-vert {
+  .home-header {
     position: relative;
     top: 50%;
     transform: translateY(50%);
+  }
+
+  .about-header,
+  .contact-header,
+  .portfolio-header {
+    position: relative;
+    top: 90%;
+    transform: translateY(90%);
   }
 }
 //conditional heights that depend on the header bg image
