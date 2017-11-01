@@ -17,6 +17,8 @@ import { AboutSnippetComponent } from '../components/about-snippet/about-snippet
 import { ContactComponent } from '../views/contact/contact.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
 import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.component';
+import { ProjectsComponent } from '../components/projects/projects.component';
+import { ProjectService } from '../services/projects/project.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     AboutSnippetComponent,
     ContactComponent,
     ContactFormComponent,
-    PortfolioPageComponent
+    PortfolioPageComponent,
+    ProjectsComponent
 
 
   ],
@@ -68,7 +71,7 @@ const appRoutes: Routes = [
 
     )
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
