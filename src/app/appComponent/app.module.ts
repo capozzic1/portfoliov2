@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
+import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,10 +24,13 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent
   },
-{
-  path:'contact',
-  component: ContactComponent
-},
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'portfolio', component: PortfolioPageComponent
+  },
   {
     path: '',
     redirectTo: '/home',
@@ -50,7 +54,8 @@ const appRoutes: Routes = [
     TitleNavComponent,
     AboutSnippetComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    PortfolioPageComponent
 
 
   ],

@@ -1,4 +1,4 @@
-import { Project } from './project-data.ts';
+import { Project } from './project';
 
 export const PROJECTS: Project[] = [
   {
@@ -29,10 +29,17 @@ export const PROJECTS: Project[] = [
     url: "https://capozzic1.github.io/knockout_map/"
   },
   {
-    id: 2,
-    name: "A blog made with React and Redux",
-    skills: "React, Redux, Express, MongoDB, Passport authentication, Radium CSS, Node.js",
-    description: "This is a MERN stack blog that contains features such as creating, updating, deleting, and reading posts. It also has an authentication system.",
-    url: "reactreduxblogcc.herokuapp.com"
+    id: 5,
+    name: "A game of Simon Says",
+    skills: "jQuery, HTML, CSS",
+    description: "A game of Simon Says",
+    url: "https://codepen.io/capozzic1/pen/qqPBvo",
   },
+  {
+    id: 6,
+    name: "Rock, Scissors, Paper",
+    skills: "Javascript ES6, HTML, CSS",
+    description: "A game of rock, scissors, and paper.",
+    url: "https://capozzic1.github.io/es2015-rock-scissors-paper/"
+  }
 ]

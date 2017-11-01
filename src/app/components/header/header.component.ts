@@ -14,6 +14,7 @@ export class Header implements OnInit {
   aboutPage: boolean;
   homePage: boolean;
   contactPage: boolean;
+  portfolioPage: boolean;
   currBackground: string;
 
   constructor(private route: ActivatedRoute) { }
@@ -27,6 +28,8 @@ export class Header implements OnInit {
       this.aboutPage = true;
     } else if (this.currBackground == 'contact') {
       this.contactPage = true;
+    } else if (this.currBackground == 'portfolio') {
+      this.portfolioPage = true;
     }
 
 

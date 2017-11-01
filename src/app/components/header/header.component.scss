@@ -1,6 +1,6 @@
 //
 @import '../../../sass/variables';
-@import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
 
 .header-body {
   h3,
@@ -17,15 +17,14 @@
   h5 {
     font-size: 1.7em;
   }
-}
 
-.contact,
-.header-body,
-.my-story {
-  position: relative;
-  top: 50%;
-  transform: translateY(80%);
+  .header-vert {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+  }
 }
+//conditional heights that depend on the header bg image
 
 .home-height {
   min-height: 770px;
@@ -36,7 +35,11 @@
 }
 
 .contact-height {
-  min-height: 400px;
+  min-height: 600px;
+}
+
+.port-height {
+  min-height: 600px;
 }
 
 %background-shared {
@@ -48,17 +51,23 @@
 //backgrounds for each page
 
 .home-bg {
-  background-image: url('../../../assets/images/glow.jpg');
+  background-image: url("../../../assets/images/glow.jpg");
   @extend %background-shared;
 }
 
 .about-bg {
-  background-image: url('../../../assets/images/bulb.jpg');
+  background-image: url("../../../assets/images/basketball.jpg");
   @extend %background-shared;
 }
 
 .contact-bg {
-  background-image: url('../../../assets/images/email.png');
+  background-image: url("../../../assets/images/email.png");
+  @extend %background-shared;
+}
+
+.port-bg {
+  background-image: url("../../../assets/images/port-bg.jpg");
+  @extend %background-shared;
 }
 
 .header h2,
@@ -66,15 +75,6 @@ a,
 h3,
 h5 {
   color: white;
-}
-
-.header-gray * {
-  color: $darkGray !important;
-}
-
-.my-story {
-  top: 50%;
-  transform: translateY(80%);
 }
 //handles initial h2/navlinks/center text about each page
 
