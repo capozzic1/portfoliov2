@@ -5,5 +5,5 @@ export class Project {
   skills: string;
   description: string;
   url: any;
-
+  img: string;
 }
