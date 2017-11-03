@@ -2,7 +2,7 @@
   <div class="projects-wrap col-md-10 offset-md-1">
     <div class="row project-container">
       <div *ngFor="let project of projects" class="project col-md-4">
-        <div class="project-inner">
+        <div class="project-inner" (click)="openLink(project.url)">
           <img [src]="project.img" alt="project" />
           <h3 class="project-name">{{ project.name }}</h3>
         </div>
