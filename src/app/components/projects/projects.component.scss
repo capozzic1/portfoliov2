@@ -1,0 +1,21 @@
+.project-container {
+  padding: 40px 0;
+
+  .project-inner {
+    width: 350px;
+
+    img {
+      width: inherit;
+    }
+
+    .project-name {
+      font-size: 1.4em;
+      text-align: center;
+    }
+  }
+
+  .project,
+  .project-name {
+    padding-top: 15px;
+  }
+}

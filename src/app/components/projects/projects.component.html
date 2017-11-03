@@ -1,11 +1,20 @@
 <div class="row">
-  <div class="projects-wrap col-md-12">
-    <div *ngFor="let project of projects" class="img-fluid">
-      <img [src]="project.img" alt="project" />
-      <h3 class="project-name">{{ project.name }}</h3>
-      <p class="project-description">
-        {{ project.description }}
-      </p>
+  <div class="projects-wrap col-md-10 offset-md-1">
+    <div class="row project-container">
+      <div *ngFor="let project of projects" class="project col-md-4">
+        <div class="project-inner">
+          <img [src]="project.img" alt="project" />
+          <h3 class="project-name">{{ project.name }}</h3>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!---
+
+<p class="project-description">
+  {{ project.description }}
+</p>
+
+-->
