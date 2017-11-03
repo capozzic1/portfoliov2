@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     name: "An English Name Generator",
     skills: "React, Express, CSS, Node.js, Names API",
     description: "This is a web app that generates English names.",
-    url: "https://english-gen.herokuapp.com/",
+    url: "english-gen.herokuapp.com/",
     img: "../../assets/images/port-images/engname.png"
   },
   {
@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     name: "A neighborhood map with fun things to do",
     skills: "jQuery, Google Maps API, HTML, CSS",
     description: "This is a map that shows fun things to do in downtown Las Vegas",
-    url: "https://capozzic1.github.io/knockout_map/",
+    url: "capozzic1.github.io/knockout_map/",
     img: "../../assets/images/port-images/map.png"
   },
   {
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     name: "A game of Simon Says",
     skills: "jQuery, HTML, CSS",
     description: "A game of Simon Says",
-    url: "https://codepen.io/capozzic1/pen/qqPBvo",
+    url: "codepen.io/capozzic1/pen/qqPBvo",
     img: "../../assets/images/port-images/simon.png"
   },
   {
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     name: "Rock, Scissors, Paper",
     skills: "Javascript ES6, HTML, CSS",
     description: "A game of rock, scissors, and paper.",
-    url: "https://capozzic1.github.io/es2015-rock-scissors-paper/",
+    url: "capozzic1.github.io/es2015-rock-scissors-paper/",
     img: "../../assets/images/port-images/rockscissor.png"
   }
 ]

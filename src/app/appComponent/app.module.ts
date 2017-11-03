@@ -19,6 +19,7 @@ import { ContactFormComponent } from '../components/contact-form/contact-form.co
 import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.component';
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { ProjectService } from '../services/projects/project.service';
+import { WindowRef } from '../services/window/window.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -71,7 +72,7 @@ const appRoutes: Routes = [
 
     )
   ],
-  providers: [ProjectService],
+  providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

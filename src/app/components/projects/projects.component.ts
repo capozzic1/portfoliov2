@@ -9,11 +9,10 @@ import { WindowRef } from '../../services/window/window.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(
-    private projectService: ProjectService,
-    private winRef: WindowRef
-  )
-  { console.log(this.projects); }
+  constructor(private projectService: ProjectService,
+    private winRef: WindowRef) {
+    this.nativeWindow = winRef.getNativeWindow();
+  }
   projects: Project[];
   nativeWindow: any;
 
@@ -22,8 +21,9 @@ export class ProjectsComponent implements OnInit {
 
   }
 
-  openLink(event) {
-    console.log(event);
+  openLink(url) {
+    console.log(url);
+    this.nativeWindow.open(`https://${url}`);
   }
 
   ngOnInit(): void {
