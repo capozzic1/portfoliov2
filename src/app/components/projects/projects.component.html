@@ -3,9 +3,13 @@
     <div class="row project-container">
       <div *ngFor="let project of projects" class="project col-md-4">
         <div class="project-inner" (click)="openLink(project.url)">
-          <img [src]="project.img" alt="project" />
+          <img [src]="project.img" alt="project" class="img-fluid" />
           <h3 class="project-name">{{ project.name }}</h3>
+          <div class="middle">
+            <h3 class="text">Go to project</h3>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
