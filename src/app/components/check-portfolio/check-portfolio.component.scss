@@ -12,12 +12,14 @@
     padding-right: 25px;
   }
 
-  button {
+  .check-port-btn {
     background: #495057;
     border: none;
     color: white;
     padding: 15px;
     border-radius: 5px;
     width: 20%;
+    text-align: center;
+    font-weight: 600;
   }
 }

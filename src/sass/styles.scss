@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 //@import '../app/components/header/header.component';
 //@import '../app/components/portfolio-carousel/portfolio-carousel.component'; //@import '../app/AppComponent/app.component';
-@import url( 'https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
 @import './_variables';
 /*
 font-family: 'Audiowide', cursive;
@@ -10,6 +10,8 @@ font-family: 'Kalam', cursive;
 font-family: 'Tinos', serif;
 */
 body {
+  font-size: 18px;
+
   button,
   form,
   h1,
@@ -18,6 +20,30 @@ body {
   h4,
   p {
     font-family: 'Merriweather', serif;
+  }
+
+  h2 {
+    font-size: 180%;
+  }
+
+  nav a {
+    font-size: 120%;
+  }
+
+  .header-body h3 {
+    font-size: 250%;
+  }
+
+  .header-body h5 {
+    font-size: 140%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 100%;
+  }
+
+  .skills-wrap h3 {
+    font-size: 130%;
   }
 
   .contact-form,
