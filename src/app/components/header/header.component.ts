@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OnInit } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
 @Component({
   selector: 'header-component',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      state('out', style({ transform: 'translateX(200%)' }))
+    ]),
+    transition('in => out', animate('100ms ease-out')),
+    transition('out => in', animate('100ms ease-in'))
+  ]
 
 })
 
@@ -17,7 +27,7 @@ export class Header implements OnInit {
   portfolioPage: boolean;
   currBackground: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public state = 'out') { }
 
   ngOnInit(): void {
     this.currBackground = this.route.snapshot.url.join('');
@@ -33,6 +43,10 @@ export class Header implements OnInit {
     }
 
 
+  }
+
+  toggleNav(): void {
+    this.state = this.state === 'in' ? 'out' : 'in';
   }
 
 

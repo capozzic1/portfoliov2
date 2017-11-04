@@ -104,4 +104,17 @@ h5 {
 
     a {}
   }
+
+  .nav-btn {
+    color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    transform: translateX(200%);
+
+    a {
+      display: block;
+    }
+  }
 }

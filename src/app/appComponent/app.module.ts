@@ -11,7 +11,7 @@ import { NeedHelpComponent } from '../components/need-help/need-help.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
-import { TitleNavComponent } from '../components/title-nav/title-nav.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
@@ -20,6 +20,7 @@ import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.c
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { ProjectService } from '../services/projects/project.service';
 import { WindowRef } from '../services/window/window.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -54,7 +55,7 @@ const appRoutes: Routes = [
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    TitleNavComponent,
+
     AboutSnippetComponent,
     ContactComponent,
     ContactFormComponent,
@@ -69,6 +70,7 @@ const appRoutes: Routes = [
     CarouselModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
+      BrowserAnimationsModule
 
     )
   ],
