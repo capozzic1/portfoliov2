@@ -10,14 +10,15 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
     trigger('flyInOut', [
       state('in', style({ transform: 'translateX(0)' })),
-      state('out', style({ transform: 'translateX(200%)' }))
-    ]),
-    transition('in => out', animate('100ms ease-out')),
-    transition('out => in', animate('100ms ease-in'))
+      state('out', style({ transform: 'translateX(280%)' })),
+      transition('in => out', animate('100ms ease-out')),
+      transition('out => in', animate('100ms ease-in'))
+    ])
   ]
-
 })
+/*
 
+*/
 export class Header implements OnInit {
   //background-image: url('../../../assets/images/glow.jpg');
 
@@ -26,8 +27,10 @@ export class Header implements OnInit {
   contactPage: boolean;
   portfolioPage: boolean;
   currBackground: string;
+  state: string = 'out';
+  navOpen: boolean = true;
 
-  constructor(private route: ActivatedRoute, public state = 'out') { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.currBackground = this.route.snapshot.url.join('');
@@ -46,8 +49,11 @@ export class Header implements OnInit {
   }
 
   toggleNav(): void {
+
+  }
+  toggleClass(): void {
+    this.navOpen = !this.navOpen;
     this.state = this.state === 'in' ? 'out' : 'in';
   }
-
 
 }

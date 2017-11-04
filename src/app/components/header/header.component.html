@@ -10,20 +10,16 @@
           <div class="title ">
             <a routerLink="/home"><h2 class="text-md-center ">Lucid Web Dream</h2></a>
           </div>
-          <div class="nav">
+          <div class="nav" [@flyInOut]='state'>
             <nav>
-              <ul>
-                <li>
-                  <a routerLink="/home">Home</a>
-                  <a routerLink="/portfolio">Portfolio</a>
-                  <a routerLink="/about">About</a>
-                  <a routerLink="/contact">Contact</a>
-                </li>
-              </ul>
+              <a routerLink="/home">Home</a>
+              <a routerLink="/portfolio">Portfolio</a>
+              <a routerLink="/about">About</a>
+              <a routerLink="/contact">Contact</a>
             </nav>
           </div>
-          <div class="nav-btn-wrap">
-            <i class="fa fa-bars fa-3x nav-btn" aria-hidden="true" (click)="toggleNav()"></i>
+          <div class="nav-btn-wrap" (click)="toggleClass()">
+            <i class="fa fa-3x nav-btn" [ngClass]="{'fa-times-circle' : !navOpen, 'fa-bars' : navOpen}" aria-hidden="true"></i>
           </div>
         </div>
       </div>

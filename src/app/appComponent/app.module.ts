@@ -70,9 +70,8 @@ const appRoutes: Routes = [
     CarouselModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      BrowserAnimationsModule
-
-    )
+    ),
+    BrowserAnimationsModule
   ],
   providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]
