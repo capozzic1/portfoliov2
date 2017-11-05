@@ -3,25 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
 
 .header-body {
+  min-height: 310px;
+  position: relative;
+
   h3,
   h4,
   h5,
   p {
     font-family: 'Kalam', cursive;
-  }
-
-  .home-header {
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-  }
-
-  .about-header,
-  .contact-header,
-  .portfolio-header {
-    position: relative;
-    top: 90%;
-    transform: translateY(90%);
   }
 }
 //conditional heights that depend on the header bg image
@@ -109,6 +98,11 @@ h5 {
   }
 }
 @media screen and (max-width: 768px) {
+  .header-body {
+    top: 50%;
+    transform: translateY(-40%);
+  }
+
   .nav {
     width: 35%;
 
@@ -132,10 +126,16 @@ h5 {
   .nav-btn-wrap {
     position: relative;
     right: 15%;
+    height: 50px;
   }
 
   .mobile-nav,
   .nav-btn-wrap {
     display: block !important;
+  }
+}
+@media screen and (min-width:769px) {
+  .header-body {
+    transform: translateY(50%);
   }
 }
