@@ -40,22 +40,22 @@
 //backgrounds for each page
 
 .home-bg {
-  background-image: url("../../../assets/images/glow.jpg");
+  background-image: url("../../../assets/compressed/images/glow.jpg");
   @extend %background-shared;
 }
 
 .about-bg {
-  background-image: url("../../../assets/images/basketball.jpg");
+  background-image: url("../../../assets/compressed/images/basketball.jpg");
   @extend %background-shared;
 }
 
 .contact-bg {
-  background-image: url("../../../assets/images/email.png");
+  background-image: url("../../../assets/compressed/images/email.png");
   @extend %background-shared;
 }
 
 .port-bg {
-  background-image: url("../../../assets/images/port-bg.jpg");
+  background-image: url("../../../assets/compressed/images/port-bg.jpg");
   @extend %background-shared;
 }
 

@@ -20,7 +20,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 */
 export class Header implements OnInit {
-  //background-image: url('../../../assets/images/glow.jpg');
+  //background-image: url('../../../assets/compressed/images/glow.jpg');
 
   aboutPage: boolean;
   homePage: boolean;

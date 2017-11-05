@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     skills: "HTML, JavaScript, Sass, jQuery",
     description: "This is a landing page I made for a client in the UK(rufflefordogs.com)",
     url: "rufflefordogs.herokuapp.com",
-    img: "../../assets/images/port-images/dog-herov2.png"
+    img: "../../assets/compressed/images/port-images/dog-herov2.png"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     skills: "React, Redux, Express, MongoDB, Passport authentication, Radium CSS, Node.js, Custom express API",
     description: "This is a MERN stack blog that contains features such as creating, updating, deleting, and reading posts. It also has an authentication system.",
     url: "reactreduxblogcc.herokuapp.com",
-    img: "../../assets/images/port-images/blogv2.png"
+    img: "../../assets/compressed/images/port-images/blogv2.png"
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     skills: "React, Express, CSS, Node.js, Names API",
     description: "This is a web app that generates English names.",
     url: "english-gen.herokuapp.com/",
-    img: "../../assets/images/port-images/engname.png"
+    img: "../../assets/compressed/images/port-images/engname.png"
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     skills: "jQuery, Google Maps API, HTML, CSS",
     description: "This is a map that shows fun things to do in downtown Las Vegas",
     url: "capozzic1.github.io/knockout_map/",
-    img: "../../assets/images/port-images/map.png"
+    img: "../../assets/compressed/images/port-images/map.png"
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     skills: "jQuery, HTML, CSS",
     description: "A game of Simon Says",
     url: "codepen.io/capozzic1/pen/qqPBvo",
-    img: "../../assets/images/port-images/simon.png"
+    img: "../../assets/compressed/images/port-images/simon.png"
   },
   {
     id: 6,
@@ -46,6 +46,6 @@ export const PROJECTS: Project[] = [
     skills: "Javascript ES6, HTML, CSS",
     description: "A game of rock, scissors, and paper.",
     url: "capozzic1.github.io/es2015-rock-scissors-paper/",
-    img: "../../assets/images/port-images/rockscissor.png"
+    img: "../../assets/compressed/images/port-images/rockscissor.png"
   }
 ]
