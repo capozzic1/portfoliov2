@@ -9,8 +9,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('flyInOut', [
-      state('in', style({ transform: 'translateX(0)' })),
-      state('out', style({ transform: 'translateX(280%)' })),
+      state('in', style({ transform: 'translateY(20%)' })),
+      state('out', style({ transform: 'translateY(-140%)' })),
       transition('in => out', animate('100ms ease-out')),
       transition('out => in', animate('100ms ease-in'))
     ])
@@ -48,9 +48,6 @@ export class Header implements OnInit {
 
   }
 
-  toggleNav(): void {
-
-  }
   toggleClass(): void {
     this.navOpen = !this.navOpen;
     this.state = this.state === 'in' ? 'out' : 'in';

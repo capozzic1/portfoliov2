@@ -10,12 +10,18 @@
           <div class="title ">
             <a routerLink="/home"><h2 class="text-md-center ">Lucid Web Dream</h2></a>
           </div>
-          <div class="nav" [@flyInOut]='state'>
-            <nav>
+          <div class="nav">
+            <nav class="large-nav">
               <a routerLink="/home">Home</a>
               <a routerLink="/portfolio">Portfolio</a>
               <a routerLink="/about">About</a>
               <a routerLink="/contact">Contact</a>
+            </nav>
+            <nav class="mobile-nav" [@flyInOut]='state'>
+              <a routerLink="/home" role="button">Home</a>
+              <a routerLink="/portfolio" role="button">Portfolio</a>
+              <a routerLink="/about" role="button">About</a>
+              <a routerLink="/contact" role="button">Contact</a>
             </nav>
           </div>
           <div class="nav-btn-wrap" (click)="toggleClass()">

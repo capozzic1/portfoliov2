@@ -13,4 +13,21 @@
     border: 1px solid black;
     padding: 10px;
   }
+
+  .social-inner {
+    display: flex;
+
+    a {
+      padding-left: 10px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .about-page {
+    padding-top: 20px;
+  }
 }

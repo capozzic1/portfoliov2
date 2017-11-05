@@ -2,12 +2,9 @@
 //@import '../app/components/header/header.component';
 //@import '../app/components/portfolio-carousel/portfolio-carousel.component'; //@import '../app/AppComponent/app.component';
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
-@import './_variables'; /*
-font-family: 'Audiowide', cursive;
-font-family: 'Merriweather', serif;
-font-family: 'Kalam', cursive;
-font-family: 'Tinos', serif;
-*/
+@import './_variables';
+@import '../app/views/home/home.component';
+@import '../app/views/about/about.component';
 
 body {
   font-size: 18px;
@@ -45,6 +42,10 @@ body {
 
   .skills-wrap h3 {
     font-size: 130%;
+  }
+
+  .need-help h2 {
+    font-size: 150%;
   }
 
   .contact-form,
