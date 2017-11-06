@@ -11,7 +11,7 @@ import { NeedHelpComponent } from '../components/need-help/need-help.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
-
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
@@ -68,10 +68,9 @@ const appRoutes: Routes = [
     BsDropdownModule.forRoot(),
     BrowserModule,
     CarouselModule.forRoot(),
-    RouterModule.forRoot(
-      appRoutes,
-    ),
-    BrowserAnimationsModule
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics])
   ],
   providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]
