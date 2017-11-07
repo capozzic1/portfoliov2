@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'contact-form',
   templateUrl: './contact-form.component.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  receiveInput(value: string, email: string) {
+    console.log(value);
   }
 
 }

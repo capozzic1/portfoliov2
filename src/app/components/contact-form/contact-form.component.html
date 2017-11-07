@@ -1,13 +1,15 @@
 <div class="contact-wrap">
 
-  <form action="" class="contact-form mx-auto">
+  <form #contactForm="ngForm" class="contact-form mx-auto">
 
     <label for="name">Name</label>
-    <input type="text" id="name">
+    <input type="text" id="name" [(ngModel)]="model.name" name="name">
     <label for="email">Email</label>
     <input type="text" id="email">
     <label for="message">Message</label>
-    <textarea name="" id="message" cols="30" rows="4"></textarea>
+    <textarea name="" id="message" cols="30" rows="4"></textarea >
     <input type="submit" class="contact-submit">
+
   </form>
 </div>
+{{model.name}}

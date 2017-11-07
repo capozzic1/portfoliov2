@@ -21,6 +21,7 @@ import { ProjectsComponent } from '../components/projects/projects.component';
 import { ProjectService } from '../services/projects/project.service';
 import { WindowRef } from '../services/window/window.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -70,7 +71,8 @@ const appRoutes: Routes = [
     CarouselModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics])
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    FormsModule
   ],
   providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]
