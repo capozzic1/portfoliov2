@@ -1,9 +1,76 @@
 @media screen and (max-width: 425px) {
+  %flex-col-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .check-port-btn {
     width: 70% !important;
   }
 
   .send-msg {
     left: 0 !important;
+  }
+
+  .check-portfolio {
+    @extend %flex-col-center;
+  }
+
+  .need-help {
+    @extend %flex-col-center;
+
+    a {
+      width: 40% !important;
+    }
+  }
+
+  .skills-wrap {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .titleh2 {
+    position: relative;
+    left: 15%;
+  }
+
+  .check-port-btn {
+    margin-top: 10px;
+  }
+
+  .header-body {
+    top: 50%;
+    transform: translateY(-40%);
+  }
+
+  .nav {
+    width: 35%;
+
+    .large-nav {
+      display: none;
+    }
+
+    .mobile-nav {
+      width: 120%;
+      z-index: 10;
+      background: #343a40;
+    }
+    //  transform: translateX(200%);
+    a {
+      display: block;
+      padding: 10px 0;
+      border: 1px solid white;
+    }
+  }
+
+  .nav-btn-wrap {
+    position: relative;
+    right: 15%;
+    height: 50px;
+  }
+
+  .mobile-nav,
+  .nav-btn-wrap {
+    display: block !important;
   }
 }
