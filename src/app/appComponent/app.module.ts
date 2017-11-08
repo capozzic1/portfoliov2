@@ -22,6 +22,7 @@ import { ProjectService } from '../services/projects/project.service';
 import { WindowRef } from '../services/window/window.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]

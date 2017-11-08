@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'contact-form',
@@ -7,15 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+  model: Object = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
-
-  constructor() { }
+  constructor(private http: HttpClient
+  ) { }
 
   ngOnInit() {
   }
 
-  receiveInput(value: string, email: string) {
-    console.log(value);
-  }
 
 }
