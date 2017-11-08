@@ -16,6 +16,9 @@ export class ContactFormComponent implements OnInit {
   constructor(private http: HttpClient
   ) { }
 
+  onSubmit(): void {
+    this.http.post('/email', this.model).subscribe();
+  }
   ngOnInit() {
   }
 
