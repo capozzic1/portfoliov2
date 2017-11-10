@@ -1,6 +1,10 @@
 {
   "name": "portfoliov4",
   "version": "0.0.0",
+  "engines":{
+    "npm":"3.10.10",
+    "node":"6.11.5"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
