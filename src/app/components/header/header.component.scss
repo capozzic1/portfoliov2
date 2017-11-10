@@ -86,7 +86,6 @@ h5 {
 
   .nav {
     font-family: 'Merriweather', serif;
-    border-bottom: 2px solid white;
   }
 
   .nav-btn {
@@ -97,8 +96,11 @@ h5 {
   .nav-btn-wrap {
     display: none;
   }
+
+  .large-nav {
+    border-bottom: 2px solid white;
+  }
 }
-@media screen and (max-width: 768px) {}
 @media screen and (min-width:769px) {
   .header-body {
     transform: translateY(50%);

@@ -1,13 +1,15 @@
 <div class="contact-wrap">
 
   <form #contactForm="ngForm" class="contact-form mx-auto" (ngSubmit)="onSubmit()">
-
     <label for="name">Name</label>
-    <input type="text" id="name" [(ngModel)]="model.name" name="name">
+    <input type="text" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>
     <label for="email">Email</label>
-    <input type="text" id="email" [(ngModel)]="model.email" name="email">
+    <input type="email" id="email" [(ngModel)]="model.email" name="email" required #email="ngModel">
+    <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
     <label for="message">Message</label>
-    <textarea name="" id="message" cols="30" rows="4" [(ngModel)]="model.message" name="message"></textarea >
+    <textarea name="" id="message" cols="30" rows="4" [(ngModel)]="model.message" name="message" required #message="ngModel"></textarea>
+    <div [hidden]="message.valid || message.pristine" class="alert alert-danger">Message is required</div>
     <input type="submit" class="contact-submit">
 
   </form>

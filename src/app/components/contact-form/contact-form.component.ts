@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-  model: Object = {
+  model = {
     name: '',
     email: '',
     message: ''
@@ -17,7 +19,8 @@ export class ContactFormComponent implements OnInit {
   ) { }
 
   onSubmit(): void {
-    this.http.post('http://localhost:8080/email', this.model).subscribe();
+
+    //this.http.post(`/email`, this.model).subscribe();
   }
   ngOnInit() {
   }
