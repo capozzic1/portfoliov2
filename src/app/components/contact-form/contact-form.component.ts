@@ -20,7 +20,8 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit(): void {
 
-    //this.http.post(`/email`, this.model).subscribe();
+    this.http.post(`/email`, this.model).subscribe();
+    alert("Your message has been sent!")
   }
   ngOnInit() {
   }
