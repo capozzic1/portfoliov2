@@ -1,5 +1,3 @@
-This is the second version of my portfolio  site.
+This is the second version of my portfolio site at lucidwebdream.com.
 
-Notes for self:
-
-move media queries to views, review styling
+It is made with Angular 4/5, Bootstrap, Sass, and uses quite a bit of flexbox CSS. 
