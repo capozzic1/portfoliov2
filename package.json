@@ -1,9 +1,9 @@
 {
   "name": "portfoliov4",
   "version": "0.0.0",
-  "engines":{
-    "npm":"3.10.10",
-    "node":"6.11.5"
+  "engines": {
+    "npm": "3.10.10",
+    "node": "6.11.5"
   },
   "license": "MIT",
   "scripts": {
@@ -29,6 +29,7 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@chevtek/angular-spinners": "^5.1.2",
     "@sendgrid/mail": "^6.1.4",
     "angulartics2": "^3.3.0",
     "body-parser": "^1.18.2",
@@ -38,6 +39,7 @@
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
+    "ng-http-loader": "^0.3.4",
     "ngx-bootstrap": "^1.9.3",
     "rxjs": "^5.4.2",
     "sendgrid": "^5.2.3",

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Angulartics2GoogleAnalytics } from 'angulartics2';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,9 +11,10 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2';
 })
 
 export class AppComponent {
-  title = 'app';
-  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
+  //sets initial value to show loading spinner on first load
+
+  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
+  ) {
 
   }
-
 }

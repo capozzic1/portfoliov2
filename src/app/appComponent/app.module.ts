@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   {
@@ -74,7 +76,10 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    NgHttpLoaderModule,
+
   ],
   providers: [ProjectService, WindowRef],
   bootstrap: [AppComponent]
