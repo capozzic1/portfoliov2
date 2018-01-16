@@ -22,22 +22,27 @@
     html,
     body {
       height: 100%;
+      margin: 0;
     }
 
+
+
     .spinner {
-      margin: 0 auto;
+      display: flex;
       width: 70px;
       text-align: center;
-      height: 50%;
-      top: 50%;
+      height: 100vh;
+      width: 100%;
       position: relative;
-      transform: translateY(50%);
+      background: black;
+      align-items: center;
+      justify-content: center;
     }
 
     .spinner>div {
       width: 18px;
       height: 18px;
-      background-color: #1D2124;
+      background-color: white;
 
       border-radius: 100%;
       display: inline-block;
