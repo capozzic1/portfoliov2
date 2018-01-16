@@ -7,6 +7,12 @@
 @import '../app/views/about/about.component';
 @import '../app/views/contact/contact.component';
 
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   font-size: 18px;
   overflow-x: hidden;

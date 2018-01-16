@@ -11,10 +11,11 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2';
 })
 
 export class AppComponent {
-  //sets initial value to show loading spinner on first load
 
   constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
   ) {
 
   }
+
+
 }

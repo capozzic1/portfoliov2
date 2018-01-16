@@ -13,7 +13,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod",
+
     "start": "node server.js"
   },
   "private": true,
@@ -40,7 +40,9 @@
     "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "ng-http-loader": "^0.3.4",
+
     "ngx-bootstrap": "^1.9.3",
+    "ngx-loading": "^1.0.14",
     "rxjs": "^5.4.2",
     "sendgrid": "^5.2.3",
     "typescript": "~2.3.3",

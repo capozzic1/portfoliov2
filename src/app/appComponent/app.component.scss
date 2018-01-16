@@ -1,1 +1,9 @@
-//Error: Source sample is missing.
+div.loading {
+  height: 100px;
+  background-color: red;
+  display: none;
+}
+
+router-outlet + div.loading {
+  display: block;
+}

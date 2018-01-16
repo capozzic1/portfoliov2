@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+import { LoadingModule } from 'ngx-loading';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -78,7 +78,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
 
-    NgHttpLoaderModule,
+
+
 
   ],
   providers: [ProjectService, WindowRef],
