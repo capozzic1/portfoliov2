@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     name: "A neighborhood map with fun things to do",
     skills: "jQuery, Google Maps API, HTML, CSS",
     description: "This is a map that shows fun things to do in downtown Las Vegas",
-    url: "capozzic1.github.io/knockout_map/",
+    url: "neighborhoodmapcc.herokuapp.com/",
     img: "../../assets/compressed/images/port-images/map.png"
   },
   {
