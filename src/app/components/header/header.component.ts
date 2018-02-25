@@ -23,6 +23,7 @@ export class Header implements OnInit {
   //background-image: url('../../../assets/compressed/images/glow.jpg');
 
   aboutPage: boolean;
+  blogPage: boolean;
   homePage: boolean;
   contactPage: boolean;
   portfolioPage: boolean;
@@ -43,6 +44,8 @@ export class Header implements OnInit {
       this.contactPage = true;
     } else if (this.currBackground == 'portfolio') {
       this.portfolioPage = true;
+    } else if (this.currBackground == 'blog') {
+      this.blogPage = true;
     }
 
 

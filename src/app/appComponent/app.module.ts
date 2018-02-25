@@ -17,6 +17,7 @@ import { AboutSnippetComponent } from '../components/about-snippet/about-snippet
 import { ContactComponent } from '../views/contact/contact.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
 import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.component';
+import { BlogComponent } from '../views/blog/blog.component'
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { ProjectService } from '../services/projects/project.service';
 import { WindowRef } from '../services/window/window.service';
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { LoadingModule } from 'ngx-loading';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,6 +40,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'portfolio', component: PortfolioPageComponent
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
   },
   {
     path: '',
@@ -64,7 +70,8 @@ const appRoutes: Routes = [
     ContactComponent,
     ContactFormComponent,
     PortfolioPageComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BlogComponent
 
 
   ],

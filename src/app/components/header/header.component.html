@@ -1,11 +1,11 @@
 <div class="row">
-  <div [ngClass]="{'home-bg' : currBackground == 'home', 'about-bg' : currBackground == 'about', 'contact-bg' : contactPage,
-'port-bg' : portfolioPage }" class="col-md-12">
+  <div [ngClass]="{'home-bg' : homePage, 'about-bg' : aboutPage, 'contact-bg' : contactPage,
+'port-bg' : portfolioPage, 'blog-bg' : blogPage }" class="col-md-12">
     <!-- class="row"-->
     <section [ngClass]="{ 'home-height' : homePage, 'about-height' : aboutPage,
   'contact-height' : contactPage, 'port-height':portfolioPage }" class="header">
 
-      <div class=" row ">
+      <div class="row">
         <div class="title-nav-wrap col-md-12 ">
           <div class="title ">
             <a routerLink="/home"><h2 class="text-md-center titleh2">Lucid Web Dream</h2></a>
@@ -16,12 +16,14 @@
               <a routerLink="/portfolio">Portfolio</a>
               <a routerLink="/about">About</a>
               <a routerLink="/contact">Contact</a>
+              <a routerLink="/blog">Blog</a>
             </nav>
             <nav class="mobile-nav" [@flyInOut]='state'>
               <a routerLink="/home" role="button">Home</a>
               <a routerLink="/portfolio" role="button">Portfolio</a>
               <a routerLink="/about" role="button">About</a>
               <a routerLink="/contact" role="button">Contact</a>
+              <a routerLink="/blog">Blog</a>
             </nav>
           </div>
           <div class="nav-btn-wrap" (click)="toggleClass()">
@@ -45,6 +47,9 @@
           </div>
           <div *ngIf="portfolioPage" class="portfolio-header">
             <h3>Projects</h3>
+          </div>
+          <div *ngIf="blogPage" class="blog-header">
+            <h3>Blog</h3>
           </div>
         </div>
       </div>
