@@ -26,6 +26,7 @@ export class Header implements OnInit {
   blogPage: boolean;
   homePage: boolean;
   contactPage: boolean;
+  singlePost: boolean;
   portfolioPage: boolean;
   currBackground: string;
   state: string = 'out';
@@ -35,7 +36,7 @@ export class Header implements OnInit {
 
   ngOnInit(): void {
     this.currBackground = this.route.snapshot.url.join('');
-
+    console.log(this.route.snapshot.url);
     if (this.currBackground == 'home') {
       this.homePage = true;
     } else if (this.currBackground == 'about') {
@@ -46,6 +47,9 @@ export class Header implements OnInit {
       this.portfolioPage = true;
     } else if (this.currBackground == 'blog') {
       this.blogPage = true;
+    } else if ((typeof Number(this.currBackground) == 'number')) {
+
+      this.singlePost = true;
     }
 
 

@@ -6,6 +6,7 @@ import { ContactComponent } from '../views/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { BlogComponent } from '../views/blog/blog.component'
 import { PortfolioPageComponent } from '../views/portfolio-page/portfolio-page.component';
+import { SinglePostComponent } from '../views/single-post/single-post.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,21 +26,22 @@ const appRoutes: Routes = [
     component: BlogComponent
   },
   {
+    path: ':id',
+    component: SinglePostComponent
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
-  {
-    path: ':slug',
-    component: SinglePost
   }
+
 ]
 
 @NgModule({
   imports: [
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
+      appRoutes
+
     )
   ],
   exports: [

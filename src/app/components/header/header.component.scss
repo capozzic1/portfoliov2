@@ -60,6 +60,12 @@
   background-position-y: 75%;
 }
 
+.single-post {
+  background-image: url("../../../assets/compressed/images/single-post.jpg");
+  height: 175px;
+  @extend %background-shared;
+}
+
 .header h2,
 a,
 h3,

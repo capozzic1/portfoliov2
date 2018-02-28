@@ -1,0 +1,14 @@
+.single-grid {
+  display: grid;
+  grid-row-gap: 25px;
+  margin: 5% auto;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}

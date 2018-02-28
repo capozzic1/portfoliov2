@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from '../components/post-list/post-list.component';
 import { PostService } from '../services/blog/posts.service';
 import { AppRoutingModule } from './app-routing.module';
+import { SinglePostComponent } from '../views/single-post/single-post.component';
 
 
 
@@ -48,7 +49,8 @@ import { AppRoutingModule } from './app-routing.module';
     PortfolioPageComponent,
     ProjectsComponent,
     BlogComponent,
-    PostListComponent
+    PostListComponent,
+    SinglePostComponent
 
 
   ],

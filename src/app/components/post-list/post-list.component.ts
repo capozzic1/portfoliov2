@@ -15,7 +15,7 @@ export class PostListComponent implements OnInit {
   getPosts() {
 
     this.postService.getPosts().subscribe(res => {
-      console.log(res)
+      //console.log(res)
       this.posts = res
     });
   }
@@ -23,8 +23,8 @@ export class PostListComponent implements OnInit {
     this.getPosts();
   }
 
-  selectPost(slug) {
-    this.router.navigate([slug]);
+  selectPost(id) {
+    this.router.navigate([id]);
   }
 
 }
