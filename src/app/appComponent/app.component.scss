@@ -3,6 +3,7 @@ div.loading {
   background-color: red;
   display: none;
 }
+//hey
 
 router-outlet + div.loading {
   display: block;

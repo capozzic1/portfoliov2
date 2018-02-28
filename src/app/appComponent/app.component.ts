@@ -9,7 +9,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2';
   styleUrls: ['./app.component.scss'],
 
 })
-
+//test
 export class AppComponent {
 
   constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics

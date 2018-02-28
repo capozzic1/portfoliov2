@@ -24,8 +24,8 @@ import { WindowRef } from '../services/window/window.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-import { LoadingModule } from 'ngx-loading';
+import { PostListComponent } from '../components/post-list/post-list.component';
+import { PostService } from '../services/blog/posts.service';
 
 
 const appRoutes: Routes = [
@@ -71,7 +71,8 @@ const appRoutes: Routes = [
     ContactFormComponent,
     PortfolioPageComponent,
     ProjectsComponent,
-    BlogComponent
+    BlogComponent,
+    PostListComponent
 
 
   ],
@@ -89,7 +90,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [ProjectService, WindowRef],
+  providers: [ProjectService, WindowRef, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

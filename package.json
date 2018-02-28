@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "dev-start": "ng serve --port 3000",
+    "dev-start": "ng serve --poll=1000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,7 +19,6 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
-    "@angular/cli": "1.4.9",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/compiler-cli": "^4.2.4",
@@ -40,15 +39,15 @@
     "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "ng-http-loader": "^0.3.4",
-
     "ngx-bootstrap": "^1.9.3",
-
     "rxjs": "^5.4.2",
     "sendgrid": "^5.2.3",
     "typescript": "~2.3.3",
+    "wpapi": "^1.1.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
+    "@angular/cli": "^1.7.1",
     "@angular/forms": "^4.2.4",
     "@angular/language-service": "^4.2.4",
     "@types/google.analytics": "0.0.36",
@@ -58,7 +57,7 @@
     "codelyzer": "~3.2.0",
     "gulp": "^3.9.1",
     "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "^3.4.0",
+    "gulp-imagemin": "^4.1.0",
     "imagemin-giflossy": "^5.1.10",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.1",

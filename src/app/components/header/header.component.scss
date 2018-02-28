@@ -19,14 +19,9 @@
   min-height: 770px;
 }
 
-.about-height {
-  min-height: 600px;
-}
-
-.contact-height {
-  min-height: 600px;
-}
-
+.about-height,
+.blog-height,
+.contact-height,
 .port-height {
   min-height: 600px;
 }
@@ -57,6 +52,12 @@
 .port-bg {
   background-image: url("../../../assets/compressed/images/port-bg.jpg");
   @extend %background-shared;
+}
+
+.blog-bg {
+  background-image: url("../../../assets/compressed/images/blog-header.jpg");
+  @extend %background-shared;
+  background-position-y: 75%;
 }
 
 .header h2,
