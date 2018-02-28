@@ -12,7 +12,7 @@ export class PostService {
 
   getPosts(): Observable<any> {
 
-    return this.http.get<any>(this._wpBase + 'posts');
+    return this.http.get<any>(`${this._wpBase}posts?_embed`);
   }
 }
 //let test = new PostsService();

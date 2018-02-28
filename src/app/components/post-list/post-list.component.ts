@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/blog/posts.service';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'post-list',
   templateUrl: './post-list.component.html',
@@ -9,7 +10,7 @@ import { DatePipe } from '@angular/common';
 
 export class PostListComponent implements OnInit {
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
   posts: any[];
   getPosts() {
 
@@ -20,6 +21,10 @@ export class PostListComponent implements OnInit {
   }
   ngOnInit() {
     this.getPosts();
+  }
+
+  selectPost(slug) {
+    this.router.navigate([slug]);
   }
 
 }

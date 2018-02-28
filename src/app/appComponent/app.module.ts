@@ -12,7 +12,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
-import { RouterModule, Routes } from '@angular/router';
+
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
@@ -26,33 +26,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from '../components/post-list/post-list.component';
 import { PostService } from '../services/blog/posts.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'portfolio', component: PortfolioPageComponent
-  },
-  {
-    path: 'blog',
-    component: BlogComponent
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-
-
-]
 
 @NgModule({
   declarations: [
@@ -80,12 +56,11 @@ const appRoutes: Routes = [
     BsDropdownModule.forRoot(),
     BrowserModule,
     CarouselModule.forRoot(),
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     BrowserAnimationsModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     FormsModule,
     HttpClientModule,
-
 
 
 
