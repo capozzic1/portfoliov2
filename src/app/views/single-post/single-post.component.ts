@@ -11,7 +11,7 @@ import { Post } from '../../services/blog/post';
 export class SinglePostComponent implements OnInit {
 
   post: Post;
-
+  loading: boolean;
   constructor(private postService: PostService, private route: ActivatedRoute) { }
 
   getPost(id) {
@@ -21,13 +21,13 @@ export class SinglePostComponent implements OnInit {
       //console.log(res);
 
       this.post = res;
-    });
+    }, (err) => console.log(err), () => this.loading = false);
   }
   ngOnInit() {
     this.route.params.forEach((params: Params) => {
 
       let id = params['id'];
-
+      this.loading = true;
       this.getPost(id);
     })
   }

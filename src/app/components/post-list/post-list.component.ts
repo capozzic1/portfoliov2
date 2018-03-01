@@ -12,15 +12,23 @@ export class PostListComponent implements OnInit {
 
   constructor(private postService: PostService, private router: Router) { }
   posts: any[];
+  loading: boolean;
   getPosts() {
 
     this.postService.getPosts().subscribe(res => {
       //console.log(res)
+
       this.posts = res
-    });
+      //this.loading = false;
+    }, (err) => console.log(err), () => {
+
+      this.loading = false;
+    })
   }
   ngOnInit() {
+
     this.getPosts();
+    this.loading = true;
   }
 
   selectPost(id) {

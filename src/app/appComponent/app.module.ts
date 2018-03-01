@@ -12,7 +12,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
-
+import { LoadingModule } from 'ngx-loading';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
@@ -63,7 +63,16 @@ import { SinglePostComponent } from '../views/single-post/single-post.component'
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     FormsModule,
     HttpClientModule,
+    LoadingModule.forRoot({
 
+      primaryColour: '#0f0872',
+      secondaryColour: '#0f0872',
+      tertiaryColour: '#0f0872',
+      backdropBackgroundColour: 'rgb(255, 255, 255)'
+
+
+
+    })
 
 
   ],
