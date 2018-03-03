@@ -7,5 +7,6 @@
     <img [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="">
     <h3 class="single-date">{{post.date | date}}</h3>
     <div class="single-content" [innerHtml]="post.content.rendered"></div>
+    <disqus [identifier]="pageId"></disqus>
   </div>
 </div>

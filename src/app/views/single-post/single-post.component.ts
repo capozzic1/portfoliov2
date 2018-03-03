@@ -12,15 +12,18 @@ export class SinglePostComponent implements OnInit {
 
   post: Post;
   loading: boolean;
+  pageId: any;
+
   constructor(private postService: PostService, private route: ActivatedRoute) { }
 
   getPost(id) {
     this.postService.getPost(id).subscribe(res => {
 
 
-      //console.log(res);
+      console.log(res);
 
       this.post = res;
+      this.pageId = this.post.id;
     }, (err) => console.log(err), () => this.loading = false);
   }
   ngOnInit() {

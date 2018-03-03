@@ -3,6 +3,8 @@
 
   .post-item {
     margin-top: 3%;
+    grid-row-gap: 10px;
+    display: grid;
 
     h1 {
       font-size: 1.75rem;

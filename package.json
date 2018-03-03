@@ -40,6 +40,7 @@
     "font-awesome": "^4.7.0",
     "ng-http-loader": "^0.3.4",
     "ngx-bootstrap": "^1.9.3",
+    "ngx-disqus": "^2.3.7",
     "ngx-loading": "^1.0.14",
     "rxjs": "^5.4.2",
     "sendgrid": "^5.2.3",

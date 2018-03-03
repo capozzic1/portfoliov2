@@ -28,7 +28,7 @@ import { PostListComponent } from '../components/post-list/post-list.component';
 import { PostService } from '../services/blog/posts.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SinglePostComponent } from '../views/single-post/single-post.component';
-
+import { DisqusModule } from 'ngx-disqus';
 
 
 @NgModule({
@@ -72,7 +72,8 @@ import { SinglePostComponent } from '../views/single-post/single-post.component'
 
 
 
-    })
+    }),
+    DisqusModule.forRoot('lucidwebdream-com')
 
 
   ],
