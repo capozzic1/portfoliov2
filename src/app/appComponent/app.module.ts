@@ -11,7 +11,7 @@ import { NeedHelpComponent } from '../components/need-help/need-help.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
-import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
+
 import { LoadingModule } from 'ngx-loading';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
@@ -29,7 +29,8 @@ import { PostService } from '../services/blog/posts.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SinglePostComponent } from '../views/single-post/single-post.component';
 import { DisqusModule } from 'ngx-disqus';
-
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
 
 @NgModule({
   declarations: [
