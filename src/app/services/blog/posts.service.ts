@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+
 import { Post } from './post';
 @Injectable()
 export class PostService {
@@ -15,8 +15,8 @@ export class PostService {
     return this.http.get<any>(`${this._wpBase}posts?_embed`);
   }
 
-  getPost(id): Observable<any> {
-    return this.http.get(`${this._wpBase}posts/${id}?_embed`);
+  getPost(id) {
+    //return this.http.get(`${this._wpBase}posts/${id}?_embed`);
   }
 
 }

@@ -30,8 +30,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { SinglePostComponent } from '../views/single-post/single-post.component';
 import { DisqusModule } from 'ngx-disqus';
 import { Angulartics2Module } from 'angulartics2';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
+//import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
+import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 
+import { createLogger } from 'redux-logger';
+import reducer from '../redux/reducer';
+import { IAppState, INITIAL_STATE } from '../redux/reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +65,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
     CarouselModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    //  Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     FormsModule,
     HttpClientModule,
     LoadingModule.forRoot({
@@ -74,11 +78,22 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
 
 
     }),
-    DisqusModule.forRoot('lucidwebdream-com')
+    DisqusModule.forRoot('lucidwebdream-com'),
+    NgReduxModule
 
 
   ],
   providers: [ProjectService, WindowRef, PostService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>,
+    devTools: DevToolsExtension
+  ) {
+    const storeEnhancers = devTools.isEnabled() ? // <- New
+      [devTools.enhancer()] : // <- New
+      []; // <- New
+
+    ngRedux.configureStore(reducer, INITIAL_STATE, [createLogger()], storeEnhancers)
+  }
+}

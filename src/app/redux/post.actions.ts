@@ -14,18 +14,16 @@ export class PostActions {
   }
 
   getPosts() {
-    //return { type: PostActions.GET_POSTS };
-    // this.ngRedux.dispatch({
-    //   type: PostActions.GET_POSTS,
-    //   payload: this.postService.getPosts()
-    // });
-
     this.postService.getPosts().subscribe((res) => {
       this.ngRedux.dispatch({
         type: PostActions.GET_POSTS,
         payload: res
       })
     })
+  }
+
+  getSinglePost() {
+
   }
 
 
