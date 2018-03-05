@@ -22,9 +22,7 @@ export class PostActions {
     })
   }
 
-  getSinglePost() {
 
-  }
 
 
 }
