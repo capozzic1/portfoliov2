@@ -11,7 +11,7 @@ import { NeedHelpComponent } from '../components/need-help/need-help.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { AboutComponent } from '../views/about/about.component';
 import { HomeComponent } from '../views/home/home.component';
-
+// import { environment } from '../environments/environment';
 import { LoadingModule } from 'ngx-loading';
 import { AboutSnippetComponent } from '../components/about-snippet/about-snippet.component';
 import { ContactComponent } from '../views/contact/contact.component';
@@ -31,9 +31,9 @@ import { SinglePostComponent } from '../views/single-post/single-post.component'
 import { DisqusModule } from 'ngx-disqus';
 import { Angulartics2Module } from 'angulartics2';
 //import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
-import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { createLogger } from 'redux-logger';
 import reducer from '../redux/reducer';
 import { IAppState, INITIAL_STATE } from '../redux/reducer';
 @NgModule({
@@ -74,26 +74,22 @@ import { IAppState, INITIAL_STATE } from '../redux/reducer';
       secondaryColour: '#0f0872',
       tertiaryColour: '#0f0872',
       backdropBackgroundColour: 'rgb(255, 255, 255)'
-
-
-
     }),
     DisqusModule.forRoot('lucidwebdream-com'),
-    NgReduxModule
+    StoreModule.forRoot({ posts: reducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      //  logOnly: environment.production // Restrict extension to log-only mode
+    })
 
 
   ],
   providers: [ProjectService, WindowRef, PostService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(ngRedux: NgRedux<IAppState>,
-    devTools: DevToolsExtension
-  ) {
-    const storeEnhancers = devTools.isEnabled() ? // <- New
-      [devTools.enhancer()] : // <- New
-      []; // <- New
 
-    ngRedux.configureStore(reducer, INITIAL_STATE, [createLogger()], storeEnhancers)
+export class AppModule {
+  constructor() {
+
   }
 }

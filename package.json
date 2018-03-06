@@ -30,6 +30,8 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "@chevtek/angular-spinners": "^5.1.2",
+    "@ngrx/store": "^5.1.0",
+    "@ngrx/store-devtools": "^5.1.0",
     "@sendgrid/mail": "^6.2.1",
     "angulartics2": "^5.1.2",
     "body-parser": "^1.18.2",

@@ -2,25 +2,41 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/blog/posts.service';
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
-import { PostActions } from '../../redux/post.actions';
-import { select } from '@angular-redux/store';
+//import { PostActions } from '../../redux/post.actions';
+
 import { Observable } from 'rxjs/Observable';
+import { Store, select } from '@ngrx/store';
 
 @Component({
   selector: 'post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
-  providers: [PostActions]
+  providers: []
 })
 
 export class PostListComponent implements OnInit {
+  posts$: Observable<any>;
 
-  constructor(private postService: PostService, private router: Router, private actions: PostActions) { }
-  @select() posts;
+  constructor(
+    private postService: PostService,
+    private router: Router,
+    private store: Store<any>
+  ) {
+    this.posts$ = store.select(state => state.posts);
+    this.posts$.subscribe(console.log)
+  }
+
   loading: boolean;
   //  @select() posts$;
   getPosts() {
-    this.actions.getPosts();
+    this.postService.getPosts().subscribe((res) => {
+      this.store.dispatch({
+        type: 'GET_POSTS',
+        payload: res
+      })
+
+    })
+
 
   }
   ngOnInit() {
