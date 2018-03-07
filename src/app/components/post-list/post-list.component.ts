@@ -22,8 +22,8 @@ export class PostListComponent implements OnInit {
     private router: Router,
     private store: Store<any>
   ) {
-    this.posts$ = store.select(state => state.posts);
-    this.posts$.subscribe(console.log)
+    this.posts$ = store.select('posts');
+    //this.posts$.subscribe(console.log)
   }
 
   loading: boolean;

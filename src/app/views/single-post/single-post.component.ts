@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PostService } from '../../services/blog/posts.service';
 import { Post } from '../../services/blog/post';
 import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-single-post',
@@ -12,7 +13,7 @@ import { Store, select } from '@ngrx/store';
 
 export class SinglePostComponent implements OnInit {
 
-  post;
+  post$: Observable<any>;
   loading: boolean;
   pageId: any;
 
@@ -20,14 +21,16 @@ export class SinglePostComponent implements OnInit {
     private postService: PostService,
     private route: ActivatedRoute,
     private store: Store<any>
-  ) { }
+  ) {
+
+
+  }
 
   getPost(id) {
+    this.post$ = this.store.select('posts').map(posts => posts.filter(post => post.id === id))
+    this.post$.subscribe(console.log)
     //     @select(['todos']) todos$;
     // filteredTodos$ = this.todos$.map(todos=>todos.filter(todo=>todo.id==='xr34dfg')
-
-
-
 
     //code that redux will be replacing
     // this.postService.getPost(id).subscribe(res => {
