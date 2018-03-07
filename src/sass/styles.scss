@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 //@import '../app/components/header/header.component';
 //@import '../app/components/portfolio-carousel/portfolio-carousel.component'; //@import '../app/AppComponent/app.component';
-@import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Kalam|Merriweather|Tinos|Open+Sans');
 @import './_variables';
 @import '../app/views/home/home.component';
 @import '../app/views/about/about.component';
 @import '../app/views/contact/contact.component';
+@import '../app/components/post-list/post-list.component';
+@import '../app/views/single-post/single-post.component';
 
 .spinner {
   display: flex;
