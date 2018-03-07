@@ -28,28 +28,55 @@ export class Header implements OnInit {
   contactPage: boolean;
   singlePost: boolean;
   portfolioPage: boolean;
-  currBackground: string;
+
   state: string = 'out';
   navOpen: boolean = true;
+  bgClass: string;
+  heightClass: string;
+
+  // { 'home-height' : homePage, 'about-height' : aboutPage,
+  // 'contact-height' : contactPage, 'port-height':portfolioPage , 'single-height':singlePost}
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.currBackground = this.route.snapshot.url.join('');
+    const page = this.route.snapshot.url.join('');
     console.log(this.route.snapshot.url);
-    if (this.currBackground == 'home') {
-      this.homePage = true;
-    } else if (this.currBackground == 'about') {
-      this.aboutPage = true;
-    } else if (this.currBackground == 'contact') {
-      this.contactPage = true;
-    } else if (this.currBackground == 'portfolio') {
-      this.portfolioPage = true;
-    } else if (this.currBackground == 'blog') {
-      this.blogPage = true;
-    } else if ((typeof Number(this.currBackground) == 'number')) {
-
-      this.singlePost = true;
+    switch (page) {
+      case 'home': {
+        this.bgClass = 'home-bg';
+        this.heightClass = 'home-height';
+        this.homePage = true;
+        break;
+      }
+      case 'about': {
+        this.bgClass = 'about-bg';
+        this.heightClass = 'about-height';
+        this.aboutPage = true;
+        break;
+      }
+      case 'contact': {
+        this.bgClass = 'contact-bg';
+        this.heightClass = 'contact-height';
+        this.contactPage = true;
+        break;
+      }
+      case 'portfolio': {
+        this.bgClass = 'port-bg';
+        this.heightClass = 'port-height';
+        this.portfolioPage = true;
+        break;
+      }
+      case 'blog': {
+        this.bgClass = 'blog-bg';
+        this.blogPage = true;
+        break;
+      }
+      default:
+        this.bgClass = 'single-post';
+        this.singlePost = true;
+        this.heightClass = 'single-height';
+        break;
     }
 
 

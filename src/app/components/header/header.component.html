@@ -1,9 +1,7 @@
 <div class="row">
-  <div [ngClass]="{'home-bg' : homePage, 'about-bg' : aboutPage, 'contact-bg' : contactPage,
-'port-bg' : portfolioPage, 'blog-bg' : blogPage, 'single-post' : singlePost }" class="col-md-12">
+  <div [ngClass]="bgClass" class="col-md-12">
     <!-- class="row"-->
-    <section [ngClass]="{ 'home-height' : homePage, 'about-height' : aboutPage,
-  'contact-height' : contactPage, 'port-height':portfolioPage , 'single-height':singlePost}" class="header">
+    <section [ngClass]="heightClass" class="header">
 
       <div class="row">
         <div class="title-nav-wrap col-md-12 ">

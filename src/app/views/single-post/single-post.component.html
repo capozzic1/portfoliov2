@@ -2,9 +2,9 @@
 </header-component>
 <ngx-loading [show]="loading"></ngx-loading>
 <div class="row">
-  <div class="single-grid col-md-6 offset-md-3" *ngIf="post">
+  <div class="single-grid col-md-6 offset-md-3 col-12" *ngIf="post">
     <h1 class="single-title">{{post.title.rendered}}</h1>
-    <img [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="">
+    <img class="img-fluid" [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="">
     <h3 class="single-date">{{post.date | date}}</h3>
     <div class="single-content" [innerHtml]="post.content.rendered"></div>
     <disqus [identifier]="pageId"></disqus>
