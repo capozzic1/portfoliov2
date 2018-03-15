@@ -1,29 +1,26 @@
 import { Action } from 'redux';
 //import { PostActions } from './post.actions';
 //console.log(actions)
-// import * as posts from './post.actions';
+import * as posts from './post.actions';
 
-export interface IAppState {
-
+export interface State {
   posts: any
-
 }
 
-export const INITIAL_STATE: IAppState = {
+export const initialState: State = {
   posts: []
 
 };
 
 export default function reducer(
-  state = {
-    posts: []
-  }, action) {
+  state = initialState, action): State {
   switch (action.type) {
-    case 'GET_POSTS': {
+    case posts.GET_POSTS_SUCCESS: {
       return action.payload;
-    }
+    };
     default: {
       return state;
     }
   }
+
 }

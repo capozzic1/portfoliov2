@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 import { Observable } from 'rxjs/Observable';
 import { Store, select } from '@ngrx/store';
-
+import * as posts from '../../redux/post.actions';
 @Component({
   selector: 'post-list',
   templateUrl: './post-list.component.html',
@@ -29,16 +29,9 @@ export class PostListComponent implements OnInit {
   loading: boolean;
   //  @select() posts$;
   getPosts() {
-    this.postService.getPosts().subscribe((res) => {
-      this.store.dispatch({
-        type: 'GET_POSTS',
-        payload: res
-      })
-
-    })
-
-
+    this.store.dispatch(new posts.GetPostsAction())
   }
+
   ngOnInit() {
     this.getPosts();
 

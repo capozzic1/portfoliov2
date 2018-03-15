@@ -35,7 +35,10 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import reducer from '../redux/reducer';
-import { IAppState, INITIAL_STATE } from '../redux/reducer';
+import { State, initialState } from '../redux/reducer';
+import { EffectsModule } from '@ngrx/effects';
+
+import { PostEffects } from '../redux/posts.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,9 +83,8 @@ import { IAppState, INITIAL_STATE } from '../redux/reducer';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       //  logOnly: environment.production // Restrict extension to log-only mode
-    })
-
-
+    }),
+    EffectsModule.forRoot([PostEffects])
   ],
   providers: [ProjectService, WindowRef, PostService],
   bootstrap: [AppComponent]
