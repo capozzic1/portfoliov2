@@ -2,6 +2,7 @@
   margin: 5% auto;
 
   .post-item {
+    cursor: pointer;
     margin-top: 3%;
     grid-row-gap: 10px;
     display: grid;
@@ -18,5 +19,9 @@
       font-family: 'Open-Sans', sans-serif;
       font-size: 1.2rem;
     }
+  }
+
+  a.read-more {
+    color: darkgray;
   }
 }

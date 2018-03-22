@@ -2,7 +2,7 @@
 </header-component>
 <ngx-loading [show]="loading"></ngx-loading>
 <div class="row">
-  <div class="single-post-grid col-md-6 offset-md-3 col-12" *ngIf="post">
+  <div class="single-post-grid col-md-8 offset-md-2 col-lg-5 offset-lg-3 col-12" *ngIf="post">
     <h1 class="single-title">{{post.title.rendered}}</h1>
     <img class="img-fluid" [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="">
     <h3 class="single-date">{{post.date | date}}</h3>
