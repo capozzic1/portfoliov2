@@ -11,9 +11,8 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 })
 //test
 export class AppComponent {
-  //angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
-  constructor(
-  ) {
+
+  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
 
   }
 
