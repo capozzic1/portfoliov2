@@ -61,7 +61,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
     CarouselModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    Angulartics2Module.forRoot(),
     FormsModule,
     HttpClientModule,
     LoadingModule.forRoot({

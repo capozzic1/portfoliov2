@@ -8,7 +8,7 @@ const cors = require('cors');
 const helper = require('sendgrid').mail;
 const compression = require('compression');
 const to_email = new helper.Email('capozzic1@gmail.com');
-
+const PORT = process.env.port || 8080;
 app.use(cors());
 app.use(compression());
 // Run the app by serving the static files
@@ -47,4 +47,6 @@ app.get('/*', function(req, res) {
 });
 // Start the app by listening on the default
 // Heroku port
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, () => {
+console.log(`Listening on port ${PORT}`);
+});
