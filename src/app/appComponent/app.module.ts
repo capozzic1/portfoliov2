@@ -57,7 +57,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
   ],
   imports: [
     BsDropdownModule.forRoot(),
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CarouselModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
