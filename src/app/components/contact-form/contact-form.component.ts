@@ -2,6 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'contact-form',
@@ -15,15 +16,34 @@ export class ContactFormComponent implements OnInit {
     message: ''
   };
 
-  constructor(private http: HttpClient
+  public contactForm: FormGroup;
+
+  constructor(private http: HttpClient, private fb: FormBuilder
   ) { }
 
   onSubmit(): void {
-
-    this.http.post(`/email`, this.model).subscribe();
+    
+    // this.http.post(`/email`, this.model).subscribe();
     alert("Your message has been sent!")
   }
   ngOnInit() {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      message: ['', Validators. required]
+    })
+  }
+
+  get name() {
+    return this.contactForm.get('name');
+  }
+
+  get email() {
+    return this.contactForm.get('email');
+  }
+
+  get message() {
+    return this.contactForm.get('message');
   }
 
 

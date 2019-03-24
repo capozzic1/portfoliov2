@@ -22,7 +22,7 @@ import { ProjectsComponent } from '../components/projects/projects.component';
 import { ProjectService } from '../services/projects/project.service';
 import { WindowRef } from '../services/window/window.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from '../components/post-list/post-list.component';
 import { PostService } from '../services/blog/posts.service';
@@ -65,15 +65,12 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
     FormsModule,
     HttpClientModule,
     LoadingModule.forRoot({
-
       primaryColour: '#0f0872',
       secondaryColour: '#0f0872',
       tertiaryColour: '#0f0872',
       backdropBackgroundColour: 'rgb(255, 255, 255)'
-
-
-
     }),
+    ReactiveFormsModule,
     DisqusModule.forRoot('lucidwebdream-com')
 
 

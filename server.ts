@@ -12,9 +12,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const helper = require('sendgrid').mail;
 const compression = require('compression');
-const to_email = new helper.Email('capozzic1@gmail.com');
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
