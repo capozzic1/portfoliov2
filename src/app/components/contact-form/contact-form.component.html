@@ -10,7 +10,7 @@
     <label for="message">Message</label>
     <textarea name="" id="message" cols="30" rows="4" formControlName="message" name="message"></textarea>
     <div [hidden]="message.valid || message.pristine" class="alert alert-danger">Message is required</div>
-    <input type="submit" class="contact-submit">
+    <input type="submit" [disabled]="contactForm.invalid" [ngClass]="{ 'contact-disabled': contactForm.invalid}" class="contact-submit">
 
   </form>
 </div>
