@@ -23,13 +23,13 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit(): void {
     
-    // this.http.post(`/email`, this.model).subscribe();
+    this.http.post(`/email`, this.contactForm.value).subscribe();
     alert("Your message has been sent!")
   }
   ngOnInit() {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       message: ['', Validators. required]
     })
   }

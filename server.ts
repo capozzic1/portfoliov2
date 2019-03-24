@@ -28,33 +28,30 @@ app.use(bodyParser.json());
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const msg = {
-  to: 'capozzic1@gmail.com',
-  from: 'test@example.com',
-  subject: 'Sending with SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-};
-sgMail.send(msg);
-// app.post('/email', (req, res) => {
-//   console.log(req.body);
 
-//   let name = req.body.name;
-//   let from_email = new helper.Email(req.body.email);
-//   let message = new helper.Content('text/plain', req.body.message);
+app.post('/email', (req, res) => {
+  const name = req.body.name;
+  const from = req.body.email;
+  const message = req.body.message;
+  console.log(req.body)
+  const msg = {
+    to: 'capozzic1@gmail.com',
+    from: from,
+    subject: 'A message from your website',
+    text: message
+  };
 
-//   let mail = new helper.Mail(from_email, name, to_email, message);
+  sgMail.send(msg)
+  .then(() => {
+    console.log('message sent');
+  })
+  .catch(error => {
+    console.error(error.toString());
+  })
 
-//   let sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-//   let request = sg.emptyRequest({ method: 'POST', path: '/v3/mail/send', body: mail.toJSON() })
 
-//   sg.API(request, function (error, response) {
-//     console.log(response.statusCode);
-//     console.log(response.body);
-//     console.log(response.headers);
-//   })
 
-// });
+});
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
